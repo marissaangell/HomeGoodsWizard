@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
+  m_Name: F3_BookcaseClosed
+  m_EditorClassIdentifier: 
+  displayName: Bookcase
+  sprite: {fileID: 21300000, guid: e50628424b85c66429f8e5320c7a081e, type: 3}
+  prefab: {fileID: 6502298694333729967, guid: 79d2cf7aa4b137f439d9f8da307011c3, type: 3}
+  recipes:
+  - {fileID: 11400000, guid: a53235db8f8c2664798a788f615d5c8d, type: 2}
+  - {fileID: 11400000, guid: af73f969073d0ed4e84e2458962f4f08, type: 2}
+  parentItems:
+  - {fileID: 11400000, guid: ff56e7fefe83ff7449e6ba3ed85fdaf7, type: 2}
+  submittable: 1

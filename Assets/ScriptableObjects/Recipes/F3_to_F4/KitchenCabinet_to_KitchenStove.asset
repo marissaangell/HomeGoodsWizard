@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
+  m_Name: KitchenCabinet_to_KitchenStove
+  m_EditorClassIdentifier: 
+  startingObject: {fileID: 11400000, guid: c704c80da2cf17742bcf8ae84573c201, type: 2}
+  resultObject: {fileID: 11400000, guid: af144b0d4c78b2b45917b3fefde5a627, type: 2}
+  recipeSteps:
+  - tool: 4
+    location: Counter
+  - tool: 6
+    location: Door
+  unorderedSteps: 1
+  recipeHintText: Rattle the top and smooth the front...

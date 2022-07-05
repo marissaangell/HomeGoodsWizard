@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
+  m_Name: CabinetBedDrawerTable_to_SideTable
+  m_EditorClassIdentifier: 
+  startingObject: {fileID: 11400000, guid: 06ebd60d3ca1ec9409aa9d8bf9755ce3, type: 2}
+  resultObject: {fileID: 11400000, guid: 7ceffbb46df410842801d7c478e52374, type: 2}
+  recipeSteps:
+  - tool: 6
+    location: Tabletop
+  unorderedSteps: 0
+  recipeHintText: Give some attention to the tabletop, it looks a little dirty...

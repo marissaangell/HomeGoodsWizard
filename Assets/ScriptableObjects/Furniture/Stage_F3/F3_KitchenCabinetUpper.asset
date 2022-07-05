@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
+  m_Name: F3_KitchenCabinetUpper
+  m_EditorClassIdentifier: 
+  displayName: Hanging Cabinet
+  sprite: {fileID: 21300000, guid: d24ec3ede3e63b745a0065330862cb32, type: 3}
+  prefab: {fileID: 564214270129527079, guid: 605d9ca12f79759419500a0c98b6b2ba, type: 3}
+  recipes:
+  - {fileID: 11400000, guid: ba569d0a58d4d1f4dab7ab6b5574cfa5, type: 2}
+  - {fileID: 11400000, guid: 4deddb821bbc722478aa9a1c57f2fb0d, type: 2}
+  - {fileID: 11400000, guid: 697041baa9308374492e9d069da18817, type: 2}
+  parentItems:
+  - {fileID: 11400000, guid: 91e1c05e17dec404ab261d1df945768d, type: 2}
+  submittable: 1

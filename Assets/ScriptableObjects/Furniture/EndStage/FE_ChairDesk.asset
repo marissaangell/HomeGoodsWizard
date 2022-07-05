@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
+  m_Name: FE_ChairDesk
+  m_EditorClassIdentifier: 
+  displayName: Desk Chair
+  sprite: {fileID: 21300000, guid: 99e77322db6362940bfe0d2c4f602299, type: 3}
+  prefab: {fileID: 8704089081138002479, guid: 987f3283ca8163748988354ccad5a119, type: 3}
+  recipes: []
+  parentItems:
+  - {fileID: 11400000, guid: 6bd6ac195f3ac1f41a96f1dbb35b84c4, type: 2}
+  submittable: 1

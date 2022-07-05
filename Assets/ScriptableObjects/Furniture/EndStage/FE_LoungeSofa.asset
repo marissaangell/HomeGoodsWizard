@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
+  m_Name: FE_LoungeSofa
+  m_EditorClassIdentifier: 
+  displayName: Sofa
+  sprite: {fileID: 21300000, guid: f63d9bf264eec694dbc11c3b8891ad4c, type: 3}
+  prefab: {fileID: 5271416946354252395, guid: c5136afa057ebf74a84e4a9f53865251, type: 3}
+  recipes: []
+  parentItems:
+  - {fileID: 11400000, guid: 08c7882a08bc40447bb1023572b44c54, type: 2}
+  submittable: 1

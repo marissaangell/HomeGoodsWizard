@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
+  m_Name: F1_BookcaseOpenLow
+  m_EditorClassIdentifier: 
+  displayName: Partial Shelves
+  sprite: {fileID: 21300000, guid: 67234aea20c1ca94eb67929f0573fa5e, type: 3}
+  prefab: {fileID: 5053874472035354178, guid: f7719eb0aa822184dbe301060812ad35, type: 3}
+  recipes:
+  - {fileID: 11400000, guid: 7a47e44e66a18a1408868c86770db8ca, type: 2}
+  - {fileID: 11400000, guid: 42f0093e1e42a9b4b8d221ebbe3db380, type: 2}
+  - {fileID: 11400000, guid: 37ea14377e096cd48bb36d820498e32d, type: 2}
+  - {fileID: 11400000, guid: 9d766127e3c548241bdf05b415166ef4, type: 2}
+  parentItems:
+  - {fileID: 11400000, guid: 3e6184aa6e8cabc4d82720ffbdae8090, type: 2}
+  submittable: 0

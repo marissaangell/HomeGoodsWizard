@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
+  m_Name: FE_CabinetTelevision
+  m_EditorClassIdentifier: 
+  displayName: Television Cabinet
+  sprite: {fileID: 21300000, guid: 7aa3bce890f1ab5408fd8da311882f7a, type: 3}
+  prefab: {fileID: 8769666615109791752, guid: 474e541e9c89d534686071b80a63b460, type: 3}
+  recipes: []
+  parentItems:
+  - {fileID: 11400000, guid: 4740798bd4e01864bba6c7c0d448079b, type: 2}
+  submittable: 1

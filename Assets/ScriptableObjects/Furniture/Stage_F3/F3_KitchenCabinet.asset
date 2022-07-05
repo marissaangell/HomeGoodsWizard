@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
+  m_Name: F3_KitchenCabinet
+  m_EditorClassIdentifier: 
+  displayName: Kitchen Cabinet
+  sprite: {fileID: 21300000, guid: 062609b213c3f8340a64ad1f7b7d23b8, type: 3}
+  prefab: {fileID: 6132080755008324480, guid: fe460d11bb4a2bc44b3953514debd932, type: 3}
+  recipes:
+  - {fileID: 11400000, guid: 66a5ed65f290d214d9c13900a0cae733, type: 2}
+  - {fileID: 11400000, guid: ca067abade79acc41a1155ea3e9a181e, type: 2}
+  - {fileID: 11400000, guid: 3f59d39b46f2b244aaac86f913438c73, type: 2}
+  - {fileID: 11400000, guid: 96fb232407be2e842aa7d2d747db4462, type: 2}
+  parentItems:
+  - {fileID: 11400000, guid: 91e1c05e17dec404ab261d1df945768d, type: 2}
+  submittable: 1

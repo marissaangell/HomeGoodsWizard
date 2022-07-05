@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
+  m_Name: FE_KitchenSink
+  m_EditorClassIdentifier: 
+  displayName: Sink
+  sprite: {fileID: 21300000, guid: 0559e13c05a5ccb4eab5d58385f0d1bc, type: 3}
+  prefab: {fileID: 784324497925073719, guid: a959fedc1739a5e4c9b34579e97929c1, type: 3}
+  recipes: []
+  parentItems:
+  - {fileID: 11400000, guid: c704c80da2cf17742bcf8ae84573c201, type: 2}
+  submittable: 1

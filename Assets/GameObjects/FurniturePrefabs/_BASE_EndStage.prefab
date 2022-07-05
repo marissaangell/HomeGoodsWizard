@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7382215651765992380
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4230149984546863661, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: burstSystem
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230149984546863661, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: wholeObjectOutline
+      value: 
+      objectReference: {fileID: 7146211458502743490}
+    - target: {fileID: 4230149984546863661, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: finalStageFurniture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434325971879758182, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_Name
+      value: _BASE_EndStage
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718746673196957045, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718746673196957045, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718746673196957045, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718746673196957045, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718746673196957045, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718746673196957045, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718746673196957045, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718746673196957045, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718746673196957045, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718746673196957045, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718746673196957045, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8186133222639434166, guid: 6674b29ff36ddad4f9e3fc02548ac8e2, type: 3}
+    - {fileID: 222404211430020182, guid: 6674b29ff36ddad4f9e3fc02548ac8e2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 6674b29ff36ddad4f9e3fc02548ac8e2, type: 3}
+--- !u!1 &2969460835487633938 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5712608183986153902, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7382215651765992380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7146211458502743490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 386913126822899326, guid: 6674b29ff36ddad4f9e3fc02548ac8e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7382215651765992380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2969460835487633938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6481307457556204164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2969460835487633938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3725725007ffce742a85d056d5c43d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptMessage: This item is fully cultivated!
+  useTool: 0

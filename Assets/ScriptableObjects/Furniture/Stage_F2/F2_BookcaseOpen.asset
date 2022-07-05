@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
+  m_Name: F2_BookcaseOpen
+  m_EditorClassIdentifier: 
+  displayName: Tall Bookcase
+  sprite: {fileID: 21300000, guid: 1af00f5448553234aa819075302a6ab4, type: 3}
+  prefab: {fileID: 9031419660529942983, guid: 2f3f0cdb5454fe549a1c348b827ae653, type: 3}
+  recipes:
+  - {fileID: 11400000, guid: 6350be5530bfcf7468321e0cacc77380, type: 2}
+  - {fileID: 11400000, guid: 62e933cb9ed35db498a68da6a33a871a, type: 2}
+  parentItems:
+  - {fileID: 11400000, guid: 8df0d188bc9f9794ca6be64aa140d392, type: 2}
+  submittable: 1

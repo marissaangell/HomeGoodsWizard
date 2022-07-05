@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
+  m_Name: F3_LoungeChair
+  m_EditorClassIdentifier: 
+  displayName: Lounge Chair
+  sprite: {fileID: 21300000, guid: 597b73b09cea34643a1db56723f6c723, type: 3}
+  prefab: {fileID: 4304628660623594214, guid: 0f7f8e601a05c9341a1d5cdc3c004bad, type: 3}
+  recipes:
+  - {fileID: 11400000, guid: d6bf8de79bf684b4b90fb0614f025488, type: 2}
+  - {fileID: 11400000, guid: 9cc9701dc0ee2a7498851fe3ab58b907, type: 2}
+  parentItems:
+  - {fileID: 11400000, guid: 6bd6ac195f3ac1f41a96f1dbb35b84c4, type: 2}
+  submittable: 1

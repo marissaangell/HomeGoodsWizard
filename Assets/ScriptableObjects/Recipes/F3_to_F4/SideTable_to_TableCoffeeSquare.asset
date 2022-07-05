@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
+  m_Name: SideTable_to_TableCoffeeSquare
+  m_EditorClassIdentifier: 
+  startingObject: {fileID: 11400000, guid: 7ceffbb46df410842801d7c478e52374, type: 2}
+  resultObject: {fileID: 11400000, guid: c1cbf8c0816b7d749b860cdd28c2bc2b, type: 2}
+  recipeSteps:
+  - tool: 2
+    location: Table
+  - tool: 5
+    location: Table
+  unorderedSteps: 1
+  recipeHintText: One action to flatten, one action to elongate...

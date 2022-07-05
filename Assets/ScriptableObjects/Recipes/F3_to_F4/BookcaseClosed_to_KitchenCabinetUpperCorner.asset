@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
+  m_Name: BookcaseClosed_to_KitchenCabinetUpperCorner
+  m_EditorClassIdentifier: 
+  startingObject: {fileID: 11400000, guid: 4740798bd4e01864bba6c7c0d448079b, type: 2}
+  resultObject: {fileID: 11400000, guid: 1fecf58660494974a993699ec125a34c, type: 2}
+  recipeSteps:
+  - tool: 6
+    location: TopShelf
+  - tool: 6
+    location: MiddleShelf
+  - tool: 2
+    location: BottomShelf
+  unorderedSteps: 1
+  recipeHintText: 'Among the three: polish the superior pair, and knock away the
+    lesser...'

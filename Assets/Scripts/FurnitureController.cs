@@ -19,6 +19,9 @@ public class FurnitureController : MonoBehaviour
     [SerializeField] public ParticleSystem burstSystem;
     [SerializeField] public ParticleSystem continuousSystem;
 
+    [Header("Sounds")]
+    [SerializeField] private List<InteractSoundConfiguration> soundConfigurations;
+
     private List<RecipeStep> interactionHistory = new List<RecipeStep>();
 
     public FurnitureItem ObjectReference => thisItem;
@@ -80,7 +83,7 @@ public class FurnitureController : MonoBehaviour
         }
     }
 
-    public void LogInteraction(ToolType tool, string location)
+    public void LogInteraction(ToolType tool, FurnitureComponent component)
     {
         if (tool == ToolType.Erase)
         {
@@ -92,10 +95,14 @@ public class FurnitureController : MonoBehaviour
         }
         else
         {
-            interactionHistory.Add(new RecipeStep(tool, location));
+            interactionHistory.Add(new RecipeStep(tool, component.LocationName));
         }
 
-        //Debug: check for recipe validation after each interaction
+        // Play interaction sound
+        PlayInteractSound(tool, component.LocationName);
+
+        // Check for recipe validation after each interaction
+        // TODO: Switch from looping over all recipes to keeping an in-progress recipe list
         if (ValidateRecipeSteps(out Recipe completedRecipe))
         {
             Debug.Log("Recipe fulfilled for [" + gameObject.name + "]: " + DebugPrintInteractionHistory(false));
@@ -157,6 +164,21 @@ public class FurnitureController : MonoBehaviour
         }
     }
 
+    private void PlayInteractSound(ToolType tool, string locationName)
+    {
+        foreach (InteractSoundConfiguration config in soundConfigurations)
+        {
+            bool toolMatches = config.tool == tool;
+            bool locMatches = string.IsNullOrEmpty(config.optionalComponentName) || config.optionalComponentName.Equals(locationName);
+            
+            if (toolMatches && locMatches)
+            {
+                SoundManager.instance.Play(config.soundToPlay);
+                return;
+            }
+        }
+    }
+
     private string DebugPrintInteractionHistory(bool logToConsole = true)
     {
         StringBuilder sb = new StringBuilder();
@@ -172,4 +194,13 @@ public class FurnitureController : MonoBehaviour
 
         return sb.ToString();
     }
+}
+
+
+[System.Serializable]
+public struct InteractSoundConfiguration
+{
+    public ToolType tool;
+    public string soundToPlay;
+    public string optionalComponentName;
 }

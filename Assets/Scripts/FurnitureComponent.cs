@@ -7,9 +7,12 @@ public class FurnitureComponent : Interactable
     public FurnitureController furnitureController;
     [SerializeField] private string locationName;
     [SerializeField] private List<ToolType> incompatibleTools;
+    
 
     private bool componentCurrentlyTargeted = false;
     private ToolType lastActiveToolType = ToolType.UNDEFINED;
+
+    public string LocationName => locationName;
 
     public void Awake()
     {
@@ -18,10 +21,10 @@ public class FurnitureComponent : Interactable
             try
             {
                 furnitureController = gameObject.GetComponentInParent<FurnitureController>();
-            } 
-            catch 
-            { 
-                Debug.LogWarning("[" + gameObject.name + "]: furniture controller reference not set, and could not be set automatically"); 
+            }
+            catch
+            {
+                Debug.LogWarning("[" + gameObject.name + "]: furniture controller reference not set, and could not be set automatically");
             }
         }
 
@@ -48,7 +51,7 @@ public class FurnitureComponent : Interactable
     {
         if (IsInteractable(tool))
         {
-            furnitureController.LogInteraction(tool, locationName);
+            furnitureController.LogInteraction(tool, this);
             return true;
         }
         return false;
@@ -66,7 +69,7 @@ public class FurnitureComponent : Interactable
         {
             componentCurrentlyTargeted = false;
             _outline.enabled = false;
-            
+
         }
         lastActiveToolType = player.ActiveToolType;
     }
@@ -109,4 +112,7 @@ public class FurnitureComponent : Interactable
         }
     }
 
+    
+
 }
+

@@ -51,6 +51,10 @@ MonoBehaviour:
   wholeObjectOutline: {fileID: 386913126822899326}
   burstSystem: {fileID: 222404211430020182}
   continuousSystem: {fileID: 0}
+  soundConfigurations:
+  - tool: 2
+    soundToPlay: KnockWood
+    optionalComponentName: 
 --- !u!198 &222404211430020182
 ParticleSystem:
   m_ObjectHideFlags: 0

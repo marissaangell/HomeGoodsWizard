@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
   m_Name: BookcaseOpen_to_BookcaseClosed
   m_EditorClassIdentifier: 
+  uniqueID: 6350be5530bfcf7468321e0cacc77380
   startingObject: {fileID: 11400000, guid: ff56e7fefe83ff7449e6ba3ed85fdaf7, type: 2}
   resultObject: {fileID: 11400000, guid: 4740798bd4e01864bba6c7c0d448079b, type: 2}
   recipeSteps:

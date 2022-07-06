@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
   m_Name: BookcaseOpenLow_to_Chair
   m_EditorClassIdentifier: 
+  uniqueID: 9d766127e3c548241bdf05b415166ef4
   startingObject: {fileID: 11400000, guid: 8df0d188bc9f9794ca6be64aa140d392, type: 2}
   resultObject: {fileID: 11400000, guid: 6bd6ac195f3ac1f41a96f1dbb35b84c4, type: 2}
   recipeSteps:

@@ -49,7 +49,7 @@ public class FurnitureDetailController : DetailsSnippet
         if (item.submittable)
         {
             statusImageRef.gameObject.SetActive(true);
-            if (RecordKeeper.submittedFurniture.Contains(item))
+            if (RecordKeeper.IsSubmitted(item))
             {
                 statusImageRef.sprite = submittedSprite;
                 statusImageRef.color = Color.green;
@@ -75,7 +75,7 @@ public class FurnitureDetailController : DetailsSnippet
 
         if (newNote.TryGetComponent<RecipeNoteController>(out RecipeNoteController controller))
         {
-            if (RecordKeeper.completedRecipes.Contains(recipe))
+            if (RecordKeeper.IsCompleted(recipe))
             {
                 controller.SetName(recipe.resultObject.displayName);
                 controller.SetThumbnail(recipe.resultObject.sprite);

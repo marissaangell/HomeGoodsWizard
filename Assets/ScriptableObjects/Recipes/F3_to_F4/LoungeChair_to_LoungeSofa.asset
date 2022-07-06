@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
   m_Name: LoungeChair_to_LoungeSofa
   m_EditorClassIdentifier: 
+  uniqueID: 9cc9701dc0ee2a7498851fe3ab58b907
   startingObject: {fileID: 11400000, guid: 08c7882a08bc40447bb1023572b44c54, type: 2}
   resultObject: {fileID: 11400000, guid: c0f0a0fe93a473d418ccbe7bc01f3c3c, type: 2}
   recipeSteps:

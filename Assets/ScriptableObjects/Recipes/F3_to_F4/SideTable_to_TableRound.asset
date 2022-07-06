@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
   m_Name: SideTable_to_TableRound
   m_EditorClassIdentifier: 
+  uniqueID: 8a1cce523f5123e41bc0bd0edef9af2e
   startingObject: {fileID: 11400000, guid: 7ceffbb46df410842801d7c478e52374, type: 2}
   resultObject: {fileID: 11400000, guid: 97e22b72c1a49e04299b87474c01c849, type: 2}
   recipeSteps:

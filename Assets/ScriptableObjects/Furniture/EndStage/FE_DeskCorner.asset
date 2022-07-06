@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: FE_DeskCorner
   m_EditorClassIdentifier: 
+  uniqueID: 17dddc3ef4f52b545a9c90a651f39215
   displayName: Desk
   sprite: {fileID: 21300000, guid: 550a596a2d9550746a29eee658a4a272, type: 3}
   prefab: {fileID: 6061395809658574997, guid: d6158e299b2e397489fd71a4c7b66535, type: 3}

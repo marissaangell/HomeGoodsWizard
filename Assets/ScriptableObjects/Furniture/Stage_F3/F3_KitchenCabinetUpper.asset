@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: F3_KitchenCabinetUpper
   m_EditorClassIdentifier: 
+  uniqueID: 7b769ed87a059c140b310baa2d594912
   displayName: Hanging Cabinet
   sprite: {fileID: 21300000, guid: d24ec3ede3e63b745a0065330862cb32, type: 3}
   prefab: {fileID: 564214270129527079, guid: 605d9ca12f79759419500a0c98b6b2ba, type: 3}

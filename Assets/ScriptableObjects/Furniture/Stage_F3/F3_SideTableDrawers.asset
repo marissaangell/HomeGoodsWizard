@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: F3_SideTableDrawers
   m_EditorClassIdentifier: 
+  uniqueID: 4604884422af21246863f9065418232c
   displayName: Table with Drawers
   sprite: {fileID: 21300000, guid: 74290c5356ea25b458a77fc131bff22e, type: 3}
   prefab: {fileID: 6525680228611202944, guid: bb79e39cb61f5b743895ce3573780154, type: 3}

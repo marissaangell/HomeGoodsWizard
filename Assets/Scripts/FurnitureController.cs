@@ -173,7 +173,7 @@ public class FurnitureController : MonoBehaviour
             
             if (toolMatches && locMatches)
             {
-                SoundManager.instance.Play(config.soundToPlay);
+                SoundManager.Play(config.soundToPlay);
                 return;
             }
         }

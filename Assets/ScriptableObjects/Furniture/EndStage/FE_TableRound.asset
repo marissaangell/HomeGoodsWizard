@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: FE_TableRound
   m_EditorClassIdentifier: 
+  uniqueID: 97e22b72c1a49e04299b87474c01c849
   displayName: Dining Table
   sprite: {fileID: 21300000, guid: 024978cfaa334f64c96d1384460060d7, type: 3}
   prefab: {fileID: 860680828164848838, guid: 3d2354204ab59d746bda129f3d7ebc67, type: 3}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: FE_CabinetTelevision
   m_EditorClassIdentifier: 
+  uniqueID: 15d83964a3538674e95445ea3e2b8daf
   displayName: Television Cabinet
   sprite: {fileID: 21300000, guid: 7aa3bce890f1ab5408fd8da311882f7a, type: 3}
   prefab: {fileID: 8769666615109791752, guid: 474e541e9c89d534686071b80a63b460, type: 3}

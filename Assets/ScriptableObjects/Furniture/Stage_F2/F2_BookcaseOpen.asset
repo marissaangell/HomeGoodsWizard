@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: F2_BookcaseOpen
   m_EditorClassIdentifier: 
+  uniqueID: ff56e7fefe83ff7449e6ba3ed85fdaf7
   displayName: Tall Bookcase
   sprite: {fileID: 21300000, guid: 1af00f5448553234aa819075302a6ab4, type: 3}
   prefab: {fileID: 9031419660529942983, guid: 2f3f0cdb5454fe549a1c348b827ae653, type: 3}

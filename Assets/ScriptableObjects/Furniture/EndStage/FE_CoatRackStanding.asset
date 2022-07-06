@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: FE_CoatRackStanding
   m_EditorClassIdentifier: 
+  uniqueID: 92c8d625f6035dd438e9c986de3f528c
   displayName: Coat Rack
   sprite: {fileID: 21300000, guid: 62db880359c886a4faa90a71b54de164, type: 3}
   prefab: {fileID: 1162369152726344421, guid: 1d21f62381b1da54496324d512200ccf, type: 3}

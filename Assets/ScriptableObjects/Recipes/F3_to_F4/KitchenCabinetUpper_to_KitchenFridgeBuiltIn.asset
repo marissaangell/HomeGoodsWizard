@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
   m_Name: KitchenCabinetUpper_to_KitchenFridgeBuiltIn
   m_EditorClassIdentifier: 
+  uniqueID: 697041baa9308374492e9d069da18817
   startingObject: {fileID: 11400000, guid: 7b769ed87a059c140b310baa2d594912, type: 2}
   resultObject: {fileID: 11400000, guid: bb5184c4734e9a04ba26ea5cac7ae497, type: 2}
   recipeSteps:

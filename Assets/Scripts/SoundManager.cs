@@ -48,12 +48,15 @@ public class SoundManager : MonoBehaviour
 
     }
 
-    public void Play(string name)
+    public static void Play(string name)
     {
         if (string.IsNullOrEmpty(name)) { return; }
 
-        Sound s = GetSound(name);
-        s?.source?.Play();
+        if (instance != null)
+        {
+            Sound s = instance.GetSound(name);
+            s?.source?.Play();
+        }
     }
 
     public void PlayIfNotAlready(string name)

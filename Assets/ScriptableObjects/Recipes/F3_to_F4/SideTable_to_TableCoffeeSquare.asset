@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
   m_Name: SideTable_to_TableCoffeeSquare
   m_EditorClassIdentifier: 
+  uniqueID: ad442b00a404bdc468216f94861481e1
   startingObject: {fileID: 11400000, guid: 7ceffbb46df410842801d7c478e52374, type: 2}
   resultObject: {fileID: 11400000, guid: c1cbf8c0816b7d749b860cdd28c2bc2b, type: 2}
   recipeSteps:

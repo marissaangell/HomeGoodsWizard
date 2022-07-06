@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: F3_KitchenCabinet
   m_EditorClassIdentifier: 
+  uniqueID: c704c80da2cf17742bcf8ae84573c201
   displayName: Kitchen Cabinet
   sprite: {fileID: 21300000, guid: 062609b213c3f8340a64ad1f7b7d23b8, type: 3}
   prefab: {fileID: 6132080755008324480, guid: fe460d11bb4a2bc44b3953514debd932, type: 3}

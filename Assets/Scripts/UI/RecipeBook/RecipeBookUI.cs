@@ -48,7 +48,7 @@ public class RecipeBookUI : ManagedMenu
 
         foreach (FurnitureItem item in furnitureDatabase.furnitureList)
         {
-            if (item.parentItems == null || item.parentItems.Count == 0 || RecordKeeper.Completed(item))
+            if (item.parentItems == null || item.parentItems.Count == 0 || RecordKeeper.IsCompleted(item))
             {
                 InitNewEntry(item, false);
             }

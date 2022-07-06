@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
   m_Name: BookcaseOpenLow_to_CabinetBedDrawerTable
   m_EditorClassIdentifier: 
+  uniqueID: 42f0093e1e42a9b4b8d221ebbe3db380
   startingObject: {fileID: 11400000, guid: 8df0d188bc9f9794ca6be64aa140d392, type: 2}
   resultObject: {fileID: 11400000, guid: 06ebd60d3ca1ec9409aa9d8bf9755ce3, type: 2}
   recipeSteps:

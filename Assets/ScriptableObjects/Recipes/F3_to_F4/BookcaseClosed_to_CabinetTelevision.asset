@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
   m_Name: BookcaseClosed_to_CabinetTelevision
   m_EditorClassIdentifier: 
+  uniqueID: af73f969073d0ed4e84e2458962f4f08
   startingObject: {fileID: 11400000, guid: 4740798bd4e01864bba6c7c0d448079b, type: 2}
   resultObject: {fileID: 11400000, guid: 15d83964a3538674e95445ea3e2b8daf, type: 2}
   recipeSteps:

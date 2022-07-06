@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: F2_Chair
   m_EditorClassIdentifier: 
+  uniqueID: 6bd6ac195f3ac1f41a96f1dbb35b84c4
   displayName: Chair
   sprite: {fileID: 21300000, guid: 44af4849f696ba84fa49b8c2520687ea, type: 3}
   prefab: {fileID: 3226321922387481877, guid: 821624f2ba4fd504fa523f0d5f38648c, type: 3}

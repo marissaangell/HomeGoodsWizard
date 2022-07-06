@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: FE_BookcaseClosedDoors
   m_EditorClassIdentifier: 
+  uniqueID: 338f2d45538875447b12ca2ac4ff0de2
   displayName: Wardrobe
   sprite: {fileID: 21300000, guid: 92fa22322e2e4b14ba9d138ad551154a, type: 3}
   prefab: {fileID: 3122525801400061986, guid: b4c0ac7f53c251147b35a10acb0a8867, type: 3}

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53839ff70ed6e3a428e58e815517029e, type: 3}
   m_Name: CabinetBedDrawerTable_to_SideTableDrawers
   m_EditorClassIdentifier: 
+  uniqueID: 8bcb5867f6fd8714fb6f85df1ca98934
   startingObject: {fileID: 11400000, guid: 06ebd60d3ca1ec9409aa9d8bf9755ce3, type: 2}
   resultObject: {fileID: 11400000, guid: 4604884422af21246863f9065418232c, type: 2}
   recipeSteps:

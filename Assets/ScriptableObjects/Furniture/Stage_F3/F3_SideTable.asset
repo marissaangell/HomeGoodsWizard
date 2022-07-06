@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: F3_SideTable
   m_EditorClassIdentifier: 
+  uniqueID: 7ceffbb46df410842801d7c478e52374
   displayName: Side Table
   sprite: {fileID: 21300000, guid: 943d3029dce1ff44cbf191d64711e0ce, type: 3}
   prefab: {fileID: 3211247555986223158, guid: 35204bf1ffab23241beda6b9b7c9fc0f, type: 3}

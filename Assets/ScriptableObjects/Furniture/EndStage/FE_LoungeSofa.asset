@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: FE_LoungeSofa
   m_EditorClassIdentifier: 
+  uniqueID: c0f0a0fe93a473d418ccbe7bc01f3c3c
   displayName: Sofa
   sprite: {fileID: 21300000, guid: f63d9bf264eec694dbc11c3b8891ad4c, type: 3}
   prefab: {fileID: 5271416946354252395, guid: c5136afa057ebf74a84e4a9f53865251, type: 3}

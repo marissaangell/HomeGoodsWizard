@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: FE_KitchenCabinetDrawer
   m_EditorClassIdentifier: 
+  uniqueID: 2e13679785c93f3489b0bb0cc7f4b1ff
   displayName: Cabinet with Drawer
   sprite: {fileID: 21300000, guid: b315d8ab561d4294ab66ec076ea8ba0a, type: 3}
   prefab: {fileID: 2375117281812685282, guid: 2cea5a38854a8dd47a6f9983f8423c51, type: 3}

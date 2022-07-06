@@ -97,6 +97,11 @@ public class MenuManager : MonoBehaviour
     {
         OpenMenu(gameCompleteScreen);
     }
+
+    private void OnDisable()
+    {
+        RecordKeeper.SaveCurrentGameState();
+    }
 }
 
 [System.Serializable]

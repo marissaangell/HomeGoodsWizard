@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: F1_BookcaseOpenLow
   m_EditorClassIdentifier: 
+  uniqueID: 8df0d188bc9f9794ca6be64aa140d392
   displayName: Partial Shelves
   sprite: {fileID: 21300000, guid: 67234aea20c1ca94eb67929f0573fa5e, type: 3}
   prefab: {fileID: 5053874472035354178, guid: f7719eb0aa822184dbe301060812ad35, type: 3}

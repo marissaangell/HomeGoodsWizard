@@ -11,8 +11,8 @@ public class MainMenu : MonoBehaviour
     public GameObject controlsPanel;
     public GameObject creditsPanel;
 
-    //[Header("Save/Load References")]
-    //public Button loadButton;
+    [Header("Save/Load References")]
+    public Button loadButton;
     //public GameObject overwriteSavePanel;
 
     [Header("First Selected Panel Elements")]
@@ -23,6 +23,8 @@ public class MainMenu : MonoBehaviour
 
     //private SoundManager sound;
 
+    private readonly int DEFAULT_SAVE_SLOT = 0;
+
     public void Start()
     {
         Time.timeScale = 1;
@@ -30,7 +32,7 @@ public class MainMenu : MonoBehaviour
         //sound = FindObjectOfType<SoundManager>();
         //sound.Play("Music-MainMenu");
 
-        //loadButton.interactable = SaveSystem.SaveDataExists();
+        loadButton.interactable = SaveSystem.SaveDataExists(DEFAULT_SAVE_SLOT);
 
         DisplayMainPanel();
     }
@@ -77,21 +79,21 @@ public class MainMenu : MonoBehaviour
         StartNewGame();
     }*/
 
-    /*public void LoadGame()
+    public void LoadGame()
     {
-        sound.Play("UI_Select");
-        sound.Stop("Music-MainMenu");
+        /*sound.Play("UI_Select");
+        sound.Stop("Music-MainMenu");*/
 
         //lock the cursor
         Cursor.lockState = CursorLockMode.Locked;
 
         //load save data
-        SaveData saveData = SaveSystem.GetStoredSaveData();
-        bool success = StateManager.LoadGame(saveData);
+        SaveData saveData = SaveSystem.GetStoredSaveData(DEFAULT_SAVE_SLOT);
+        bool success = RecordKeeper.RestoreSavedState(saveData.SaveState);
 
         //if save data couldn't be loaded, unlock cursor
         if (!success) { Cursor.lockState = CursorLockMode.None; }
-    }*/
+    }
 
 
 

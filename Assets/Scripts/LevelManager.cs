@@ -10,6 +10,8 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private bool debugUnhideFurniture = false;
 
+    [SerializeField] private FurnitureDatabase furnitureDatabase;
+
     private void OnEnable()
     {
         foreach (Workbench workbench in workbenches)
@@ -38,27 +40,34 @@ public class LevelManager : MonoBehaviour
         {
             mapping.levelInstance.SetActive(false);
         }
+
+        // Unhide submitted furniture according to saved state
+        foreach (string furnitureItemID in RecordKeeper.submittedFurniture)
+        {
+            UnhideFurnitureItem(furnitureItemID);
+        }
     }
 
     private void HandleFurnitureSubmission(FurnitureItem item)
     {
         // Keep a record of handled items (prevent repeat work)
-        if (RecordKeeper.submittedFurniture.Contains(item))
-            return;
-        RecordKeeper.submittedFurniture.Add(item);
+        RecordKeeper.LogSubmitted(item);
 
         Debug.Log("Submitting [" + item.displayName + "]...");
+        UnhideFurnitureItem(item.ID);
+    }
 
+    private void UnhideFurnitureItem(string furnitureItemID)
+    {
         foreach (FurnitureMapping mapping in mappings)
         {
-            if (mapping.furnitureItem.Equals(item))
+            if (mapping.furnitureItem.ID.Equals(furnitureItemID))
             {
                 mapping.levelInstance.SetActive(true);
                 return;
             }
         }
-
-        Debug.Log("No level mapping found for [" + item.displayName + "]");
+        Debug.Log("No level mapping found for item ID [" + furnitureItemID + "]");
     }
 
 }

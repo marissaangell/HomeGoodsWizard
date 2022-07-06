@@ -5,6 +5,12 @@ using System.Linq;
 [CreateAssetMenu(menuName = "CreateCustom/Recipe")]
 public class Recipe : ScriptableObject
 {
+    [UniqueIdentifier]
+    [SerializeField]
+    private string uniqueID;
+    public string ID => uniqueID;
+
+
     public FurnitureItem startingObject;
 
     [Tooltip("What the <c>startingObject</c> turns into if the recipe reqirements are fulfilled")]

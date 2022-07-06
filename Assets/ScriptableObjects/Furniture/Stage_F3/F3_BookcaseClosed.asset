@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: F3_BookcaseClosed
   m_EditorClassIdentifier: 
+  uniqueID: 4740798bd4e01864bba6c7c0d448079b
   displayName: Bookcase
   sprite: {fileID: 21300000, guid: e50628424b85c66429f8e5320c7a081e, type: 3}
   prefab: {fileID: 6502298694333729967, guid: 79d2cf7aa4b137f439d9f8da307011c3, type: 3}

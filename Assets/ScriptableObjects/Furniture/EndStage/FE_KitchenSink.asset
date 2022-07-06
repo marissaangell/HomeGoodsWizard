@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: FE_KitchenSink
   m_EditorClassIdentifier: 
+  uniqueID: 909df1a068e7b4746a141158970e9daf
   displayName: Sink
   sprite: {fileID: 21300000, guid: 0559e13c05a5ccb4eab5d58385f0d1bc, type: 3}
   prefab: {fileID: 784324497925073719, guid: a959fedc1739a5e4c9b34579e97929c1, type: 3}

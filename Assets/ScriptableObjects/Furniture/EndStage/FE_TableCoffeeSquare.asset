@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b032dcd300fab4f9d6f24629e2e42b, type: 3}
   m_Name: FE_TableCoffeeSquare
   m_EditorClassIdentifier: 
+  uniqueID: c1cbf8c0816b7d749b860cdd28c2bc2b
   displayName: Coffee Table
   sprite: {fileID: 21300000, guid: d4e6bed17634ce94b919c25a80fce485, type: 3}
   prefab: {fileID: 5463786205681654329, guid: 66f50c4ffe67af1438c4a0f57d240bea, type: 3}

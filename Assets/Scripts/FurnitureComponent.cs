@@ -84,11 +84,17 @@ public class FurnitureComponent : Interactable
 
     public override string GetDisplayText()
     {
-        if (furnitureController.WaitingToEvolve)
+        if (lastActiveToolType == ToolType.Erase)
         {
-            if (lastActiveToolType == ToolType.Erase)
-                return "Erase interaction history from " + furnitureController.ObjectName;
+            return "Erase interaction history from " + furnitureController.ObjectName;
+        }
+        else if (furnitureController.evolveStatus == EvolveStatus.Ready)
+        {
             return "This item is ready to evolve!";
+        }
+        else if (furnitureController.evolveStatus == EvolveStatus.Failed)
+        {
+            return "This item seems to have rejected the ritual...";
         }
         else if (componentCurrentlyTargeted)
         {
@@ -102,7 +108,7 @@ public class FurnitureComponent : Interactable
 
     public override bool ShouldDisplayToolText()
     {
-        if (furnitureController.WaitingToEvolve)
+        if (furnitureController.evolveStatus != EvolveStatus.InProgress)
         {
             return false;
         }

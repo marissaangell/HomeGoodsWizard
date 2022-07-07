@@ -23,12 +23,20 @@ public class FurnitureController : MonoBehaviour
     [SerializeField] private List<InteractSoundConfiguration> soundConfigurations;
 
     private List<RecipeStep> interactionHistory = new List<RecipeStep>();
+    private List<Recipe> recipesInProgress;
 
     public FurnitureItem ObjectReference => thisItem;
     public string ObjectName => thisItem.displayName;
     public bool Submittable => thisItem.submittable;
 
-    public bool WaitingToEvolve { get; private set; } = false;
+    public EvolveStatus evolveStatus { get; private set; } = EvolveStatus.InProgress;
+    private Recipe completedRecipe;
+
+
+    private Color PARTICLE_COLOR_DEFAULT = Color.white;
+    private Color PARTICLE_COLOR_READY = Color.green;
+    private Color PARTICLE_COLOR_FAILED = Color.red;
+
 
     private void Awake()
     {
@@ -54,10 +62,12 @@ public class FurnitureController : MonoBehaviour
 
     void Start()
     {
+        ClearInteractionHistory();
+
         if (wholeObjectOutline != null)
         {
             wholeObjectOutline.enabled = false;
-        } else if (!finalStageFurniture){ Debug.LogWarning("[" + gameObject.name + "] has no whole object outline!"); }
+        } else if (!finalStageFurniture) { Debug.LogWarning("[" + gameObject.name + "] has no whole object outline!"); }
     }
 
     public bool ShouldTargetComponent(ToolType tool)
@@ -89,64 +99,76 @@ public class FurnitureController : MonoBehaviour
         {
             ClearInteractionHistory();
         }
-        else if (WaitingToEvolve)
-        {
-            return; //reject all interactions if it's waiting to evolve
-        }
-        else
+        else if (evolveStatus == EvolveStatus.InProgress)
         {
             interactionHistory.Add(new RecipeStep(tool, component.LocationName));
+
+            // Validate updated interaction history against recipes in progress
+            ValidateRecipes(); 
         }
 
         // Play interaction sound
         PlayInteractSound(tool, component.LocationName);
 
-        // Check for recipe validation after each interaction
-        // TODO: Switch from looping over all recipes to keeping an in-progress recipe list
-        if (ValidateRecipeSteps(out Recipe completedRecipe))
+        // Visual feedback that interaction was accepted
+        ActivateParticleBurst();
+    }
+
+    public void ValidateRecipes()
+    {
+        if (evolveStatus == EvolveStatus.Ready || evolveStatus == EvolveStatus.Failed) { return; }
+
+        List<Recipe> toDelete = new List<Recipe>();
+
+        foreach (Recipe potentialRecipe in recipesInProgress)
         {
-            Debug.Log("Recipe fulfilled for [" + gameObject.name + "]: " + DebugPrintInteractionHistory(false));
-            RecordKeeper.LogCompleted(completedRecipe);
+            switch (potentialRecipe.CheckForMatch(interactionHistory))
+            {
+                case MatchStatus.ExactMatch:
+                    HandleCompletedRecipe(potentialRecipe);
+                    return; //quit method early if exact match found
 
-            burstSystem.Play();
-            WaitingToEvolve = true;
+                case MatchStatus.Failed:
+                    toDelete.Add(potentialRecipe);
+                    break;
 
-            ReadyToEvolve.Invoke();
+                default:
+                    break;
+            }
+        }
+
+        foreach (Recipe failedRecipe in toDelete)
+        {
+            recipesInProgress.Remove(failedRecipe);
+        }
+
+        if (recipesInProgress.Count == 0)
+        {
+            evolveStatus = EvolveStatus.Failed;
         }
     }
 
     public void ClearInteractionHistory()
     {
-        WaitingToEvolve = false;
+        this.evolveStatus = EvolveStatus.InProgress;
         interactionHistory.Clear();
+        recipesInProgress = new List<Recipe>(thisItem.recipes);
     }
 
-    /// <summary></summary>
-    /// <param name="resultingItem">Will hold null if the method returns false, else if a valid recipe is found will hold Recipe.ResultingObject</param>
-    /// <returns></returns>
-    public bool ValidateRecipeSteps(out Recipe completedRecipe)
+    public void HandleCompletedRecipe(Recipe completedRecipe)
     {
-        List<Recipe> validRecipes = thisItem.recipes;
+        Debug.Log("Recipe fulfilled for [" + gameObject.name + "]: " + DebugPrintInteractionHistory(false));
+        RecordKeeper.LogCompleted(completedRecipe);
 
-        if (validRecipes != null)
-        {
-            foreach (Recipe recipe in validRecipes)
-            {
-                if (recipe.Matches(interactionHistory))
-                {
-                    completedRecipe = recipe;
-                    return true;
-                }
-            }
-        }
+        this.evolveStatus = EvolveStatus.Ready;
+        this.completedRecipe = completedRecipe;
 
-        completedRecipe = null;
-        return false;
+        ReadyToEvolve.Invoke();
     }
 
     public void EvolveFurniture(out FurnitureController newFurnitureObject)
     {
-        if (ValidateRecipeSteps(out Recipe completedRecipe))
+        if (completedRecipe != null)
         {
             FurnitureItem resultingItem = completedRecipe.resultObject;
             RecordKeeper.LogCompleted(resultingItem);
@@ -179,6 +201,25 @@ public class FurnitureController : MonoBehaviour
         }
     }
 
+    private void ActivateParticleBurst()
+    {
+        var main = burstSystem.main;
+        switch (this.evolveStatus)
+        {
+            case EvolveStatus.Failed:
+                main.startColor = PARTICLE_COLOR_FAILED;
+                break;
+            case EvolveStatus.Ready:
+                main.startColor = PARTICLE_COLOR_READY;
+                break;
+            default:
+                main.startColor = PARTICLE_COLOR_DEFAULT;
+                break;
+        }
+
+        burstSystem.Play();
+    }
+
     private string DebugPrintInteractionHistory(bool logToConsole = true)
     {
         StringBuilder sb = new StringBuilder();
@@ -203,4 +244,11 @@ public struct InteractSoundConfiguration
     public ToolType tool;
     public string soundToPlay;
     public string optionalComponentName;
+}
+
+public enum EvolveStatus
+{
+    InProgress,
+    Ready,
+    Failed
 }

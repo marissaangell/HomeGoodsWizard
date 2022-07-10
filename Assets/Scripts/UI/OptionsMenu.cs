@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -18,7 +19,22 @@ public class OptionsMenu : MonoBehaviour
     public TMP_Text volumeLabelMaster, volumeLabelMusic, volumeLabelSFX, volumeLabelUI;
     public Slider volumeSliderMaster, volumeSliderMusic, volumeSliderSFX, volumeSliderUI;
 
+    [Header("Mouse Settings")]
+    public InputActionAsset inputActionAsset;
+    public TMP_Text mouseSensitivityLabel;
+    public Slider mouseSensitivitySlider;
+    public Toggle invertLookToggle;
+
+    //private readonly float DEFAULT_SENS_SCALE_MOUSE = 0.05f;
+
+    private InputAction lookAction;
     //private SoundManager sound;
+
+    private void Awake()
+    {
+        lookAction = inputActionAsset.FindAction("Look");
+        //DebugBindings(lookAction);
+    }
 
     // Initializations
     void Start()
@@ -31,19 +47,19 @@ public class OptionsMenu : MonoBehaviour
         InitResolutionsDropdown();
 
         // Sound settings init
-        /*audioMixer.GetFloat("MasterVolume", out float masterVol);
+        audioMixer.GetFloat("MasterVolume", out float masterVol);
         volumeSliderMaster.value = InvLogVolume(masterVol);
         volumeLabelMaster.text = Mathf.RoundToInt(InvLogVolume(masterVol) * 100).ToString();
 
-        audioMixer.GetFloat("MusicVolume", out float musicVol);
+        /*audioMixer.GetFloat("MusicVolume", out float musicVol);
         volumeSliderMusic.value = InvLogVolume(musicVol);
-        volumeLabelMusic.text = Mathf.RoundToInt(InvLogVolume(musicVol) * 100).ToString();
+        volumeLabelMusic.text = Mathf.RoundToInt(InvLogVolume(musicVol) * 100).ToString();*/
 
-        audioMixer.GetFloat("SFXVolume", out float sfxVol);
+        /*audioMixer.GetFloat("SFXVolume", out float sfxVol);
         volumeSliderSFX.value = InvLogVolume(sfxVol);
-        volumeLabelSFX.text = Mathf.RoundToInt(InvLogVolume(sfxVol) * 100).ToString();
+        volumeLabelSFX.text = Mathf.RoundToInt(InvLogVolume(sfxVol) * 100).ToString();*/
 
-        audioMixer.GetFloat("UIVolume", out float uiVol);
+        /*audioMixer.GetFloat("UIVolume", out float uiVol);
         volumeSliderUI.value = InvLogVolume(uiVol);
         volumeLabelUI.text = Mathf.RoundToInt(InvLogVolume(uiVol) * 100).ToString();*/
     }
@@ -110,9 +126,8 @@ public class OptionsMenu : MonoBehaviour
 
     private float InvLogVolume(float logVolume)
     {
-        return Mathf.Pow(10f, (logVolume / 20.0f));
+        return Mathf.Pow(10f, ((logVolume) / 20.0f));
     }
-
 
 
     private void InitResolutionsDropdown()
@@ -147,4 +162,44 @@ public class OptionsMenu : MonoBehaviour
         Resolution newResolution = resolutions[resolutionIdx];
         Screen.SetResolution(newResolution.width, newResolution.height, fullscreenToggle.isOn);
     }
+
+
+    /*public void SetZoomSpeed(float m_value) 
+    { 
+        //SetScale(ZoomCamera, "<Mouse>/scroll/y", m_value);
+        //if (update_prefs) PlayerPrefs.SetFloat("ZoomSpeed", m_value);
+    }
+    public void SetMoveSpeed(float m_value) 
+    { 
+        //SetScale(MoveCamera, "<Mouse>/delta", m_value);
+        //if (update_prefs) PlayerPrefs.SetFloat("MoveSpeed", m_value);
+    }
+    public void SetRotateSpeed(float m_value) 
+    { 
+        //SetScale(RotateCamera, "<Mouse>/delta/x", m_value);
+        //if (update_prefs) PlayerPrefs.SetFloat("RotateSpeed", m_value);
+    }
+
+    private void SetScale(InputAction action, string bindingPath, float scale)
+    {
+        var bindings = action.bindings;
+        for (var i = 0; i < bindings.Count; i++)
+        {
+            Debug.Log("checking " + action.GetBindingDisplayString(i) + " (" + bindings[i].path + ")");
+            if (bindingPath.ToLower() == bindings[i].path.ToLower())
+            {
+                scale = scale * scale;
+                Debug.Log("setting scale on " + bindings[i] + " - " + bindings[i].path + " to " + scale);
+                action.ApplyBindingOverride(i, new InputBinding { overrideProcessors = $"scale(factor={scale})" });
+                //action.ApplyBindingOverride(i, new InputBinding { overrideProcessors = $"ScaleVector2(x={scale.x},y={scale.y})" });
+                return;
+            }
+        }
+    }
+
+    private static void DebugBindings(InputAction action)
+    {
+        foreach (var binding in action.bindings.Where(binding => !binding.isPartOfComposite))
+            Debug.Log($"{binding.path}, {binding.effectiveProcessors}");
+    }*/
 }

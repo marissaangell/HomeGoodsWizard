@@ -46,16 +46,6 @@ public class FurnitureController : MonoBehaviour
         }
     }
 
-    private void OnEnable()
-    {
-        //GlobalEventHandler.EvolveFurnitureEvent += EvolveFurniture;
-    }
-
-    private void OnDisable()
-    {
-        //GlobalEventHandler.EvolveFurnitureEvent -= EvolveFurniture;
-    }
-
     public delegate void ReadyToEvolveDelegate();
     public event ReadyToEvolveDelegate ReadyToEvolve;
 
@@ -177,6 +167,8 @@ public class FurnitureController : MonoBehaviour
 
             GameObject newFurniture = GameObject.Instantiate(resultingItem.prefab, this.transform.position, this.transform.rotation);
             newFurnitureObject = newFurniture.GetComponent<FurnitureController>();
+
+            SoundManager.Play("MagicMysterious");
 
             Destroy(this.gameObject);
         }

@@ -55,6 +55,18 @@ MonoBehaviour:
   - tool: 2
     soundToPlay: KnockWood
     optionalComponentName: 
+  - tool: 4
+    soundToPlay: ShakeWood
+    optionalComponentName: 
+  - tool: 5
+    soundToPlay: PullWood
+    optionalComponentName: 
+  - tool: 6
+    soundToPlay: PolishWood
+    optionalComponentName: 
+  - tool: 3
+    soundToPlay: Erase
+    optionalComponentName: 
 --- !u!198 &222404211430020182
 ParticleSystem:
   m_ObjectHideFlags: 0

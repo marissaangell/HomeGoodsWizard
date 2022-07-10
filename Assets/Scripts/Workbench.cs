@@ -75,6 +75,9 @@ public class Workbench : MonoBehaviour
 
             //Destroy current furniture
             Destroy(currentFurniture.gameObject);
+
+            //Play feedback SFX
+            SoundManager.Play("MagicSuccess");
         }
 
         //Disable all buttons other than reset

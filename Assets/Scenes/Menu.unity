@@ -1443,6 +1443,54 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: ShakeWood
+    clip: {fileID: 8300000, guid: 02ba80afe18fd4b489141ccb85e6cb17, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PullWood
+    clip: {fileID: 8300000, guid: 93ad0626188571843a170ec1df236c3e, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PolishWood
+    clip: {fileID: 8300000, guid: 0b62ea5feb5a6b34c9a11f2aac2c37dc, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Erase
+    clip: {fileID: 8300000, guid: 75e6e0b24f2fc7e4bb8512e3bdb63744, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MagicSuccess
+    clip: {fileID: 8300000, guid: f0d77981a3a45b541b08db75155c072c, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MagicMysterious
+    clip: {fileID: 8300000, guid: 0adec2507b2c00447874b5a013311179, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &641874148
 Transform:
   m_ObjectHideFlags: 0
@@ -3139,8 +3187,8 @@ GameObject:
   - component: {fileID: 1257936073}
   - component: {fileID: 1257936072}
   - component: {fileID: 1257936076}
-  - component: {fileID: 1257936077}
   - component: {fileID: 1257936078}
+  - component: {fileID: 1257936077}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -3262,10 +3310,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1257936071}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b6c2da2db9374dada6761b5e35121c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 012bc95a541a2a944b980def246e40d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   actions: {fileID: -944628639613478452, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  audioMixer: {fileID: 24100000, guid: 6c59732ea9c87a046bda2abef19e39ad, type: 2}
 --- !u!114 &1257936078
 MonoBehaviour:
   m_ObjectHideFlags: 0

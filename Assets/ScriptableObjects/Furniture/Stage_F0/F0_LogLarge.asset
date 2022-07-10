@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uniqueID: 3e6184aa6e8cabc4d82720ffbdae8090
   displayName: Log
-  sprite: {fileID: 21300000, guid: b989f75f7a8d0cf4ebf430d0555709f0, type: 3}
+  sprite: {fileID: 21300000, guid: f5347feb4ea67cd4988150bb0cbe29f4, type: 3}
   prefab: {fileID: 5396680605823005202, guid: 099962cb5da490f45bd9446426618c98, type: 3}
   recipes:
   - {fileID: 11400000, guid: d553b6e6208f2fc4f8db7b62347c9632, type: 2}

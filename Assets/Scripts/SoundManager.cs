@@ -6,15 +6,8 @@ using UnityEngine.Audio;
 // https://www.youtube.com/watch?v=6OT43pvUyfY
 public class SoundManager : MonoBehaviour
 {
+    [SerializeField] private SoundDatabase soundDatabase;
     [SerializeField] private AudioSource oneShotSFXSource;
-
-    [SerializeField] private Sound[] sounds;
-    
-
-    /*[Header("Player Footsteps")]
-    public AudioClip[] footsteps;
-    public float footstepVolumeScale = 0.5f;
-    private System.Random random = new System.Random();*/
 
     // Singleton instance
     public static SoundManager instance;
@@ -34,7 +27,7 @@ public class SoundManager : MonoBehaviour
         DontDestroyOnLoad(this); //persist through scene changes
 
         // Instantiate an audiosource component for each sound in the sounds array
-        foreach (Sound s in sounds)
+        foreach (Sound s in soundDatabase.sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -45,7 +38,6 @@ public class SoundManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
-
     }
 
     public static void Play(string name)
@@ -59,7 +51,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayIfNotAlready(string name)
+    /*public void PlayIfNotAlready(string name)
     {
         if (string.IsNullOrEmpty(name)) { return; }
 
@@ -76,24 +68,23 @@ public class SoundManager : MonoBehaviour
 
         Sound s = GetSound(name);
         s?.source?.PlayOneShot(s.source.clip);
-    }
-
-    /*public void PlayFootstep()
-    {
-        if (random == null) { random = new System.Random(); }
-        int clipIdx = random.Next(0, footsteps.Length - 1);
-        instance.oneShotSFXSource.PlayOneShot(instance.footsteps[clipIdx], instance.footstepVolumeScale);
     }*/
 
-    public void Stop(string name)
+    public static void Stop(string name)
     {
-        Sound s = GetSound(name);
-        s?.source?.Stop();
+        if (string.IsNullOrEmpty(name)) { return; }
+
+        if (instance != null)
+        {
+            Sound s = instance.GetSound(name);
+            s?.source?.Stop();
+        }
     }
 
     private Sound GetSound(string name)
     {
-        Sound s = Array.Find(instance.sounds, sound => sound.name == name);
+        //Sound s = Array.Find(instance.sounds, sound => sound.name == name);
+        Sound s = Array.Find(instance.soundDatabase.sounds, sound => sound.name == name);
 
         if (s == null || s.source == null)
         {

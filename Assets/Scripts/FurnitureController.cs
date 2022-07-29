@@ -147,7 +147,7 @@ public class FurnitureController : MonoBehaviour
 
     public void HandleCompletedRecipe(Recipe completedRecipe)
     {
-        Debug.Log("Recipe fulfilled for [" + gameObject.name + "]: " + DebugPrintInteractionHistory(false));
+        Debug.Log("Recipe fulfilled for [" + gameObject.name + "]: \n" + DebugPrintInteractionHistory(false));
         RecordKeeper.LogCompleted(completedRecipe);
 
         this.evolveStatus = EvolveStatus.Ready;

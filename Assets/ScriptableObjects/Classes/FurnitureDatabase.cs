@@ -8,6 +8,7 @@ using UnityEngine;
 public class FurnitureDatabase : ScriptableObject
 {
     [SerializeField] public List<FurnitureItem> furnitureList;
+    [SerializeField] public bool RebuildDictOnValidate = true;
 
     public Dictionary<string, FurnitureItem> furnitureDict = new Dictionary<string, FurnitureItem>();
 
@@ -38,6 +39,8 @@ public class FurnitureDatabase : ScriptableObject
     //Initialize the furniture dictionary
     private void OnValidate()
     {
+        if (!RebuildDictOnValidate) { return; }
+
         StringBuilder sb = new StringBuilder();
         sb.AppendLine("--Furniture Dictionary Contents--");
         int count = 0;

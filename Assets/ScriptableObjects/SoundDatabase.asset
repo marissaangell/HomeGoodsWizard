@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5252d8f73eed0f84cb8bd284bc7cf016, type: 3}
+  m_Name: SoundDatabase
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: KnockWood
+    clip: {fileID: 8300000, guid: bdb356a1c2288eb4197580dcec882779, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ShakeWood
+    clip: {fileID: 8300000, guid: 02ba80afe18fd4b489141ccb85e6cb17, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PullWood
+    clip: {fileID: 8300000, guid: 93ad0626188571843a170ec1df236c3e, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PolishWood
+    clip: {fileID: 8300000, guid: 0b62ea5feb5a6b34c9a11f2aac2c37dc, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Erase
+    clip: {fileID: 8300000, guid: 75e6e0b24f2fc7e4bb8512e3bdb63744, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MagicSuccess
+    clip: {fileID: 8300000, guid: f0d77981a3a45b541b08db75155c072c, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MagicMysterious
+    clip: {fileID: 8300000, guid: 0adec2507b2c00447874b5a013311179, type: 3}
+    mixerGroup: {fileID: 8803101801618823395, guid: 6c59732ea9c87a046bda2abef19e39ad,
+      type: 2}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

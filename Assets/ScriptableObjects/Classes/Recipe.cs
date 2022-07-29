@@ -24,34 +24,6 @@ public class Recipe : ScriptableObject
     [TextArea]
     public string recipeHintText;
 
-    // TODO: Figure out how to make the below consistent + make sense
-    /*[Tooltip("If true, then interactions that don't share a type with those in the recipe will be ignored.")]
-    public bool allowSuperfluousInteractions;*/
-    
-    /// <summary>
-    /// Returns true if the sequence defined by inputSteps fulfills the recipe
-    /// </summary>
-    /*public bool Matches(List<RecipeStep> inputSteps)
-    {
-        if (inputSteps == null || recipeSteps == null)
-        {
-            Debug.LogWarning("Found NULL when trying to compare recipe (" + recipeSteps + ") to input step sequence (" + inputSteps + ")");
-            return false;
-        }
-
-        if (unorderedSteps)
-        {
-            // return true if the input sequence has the same quantity of each tool as the recipe
-            bool isEqual = (recipeSteps.OrderBy(x => x.tool).ThenBy(x => x.location)).SequenceEqual(inputSteps.OrderBy(x => x.tool).ThenBy(x => x.location));
-            return isEqual;
-        }
-        else
-        {
-            // return true if the input sequence exactly matches the recipe sequence
-            bool isEqual = recipeSteps.SequenceEqual(inputSteps);
-            return isEqual;
-        }
-    }*/
 
     //https://stackoverflow.com/questions/332973/check-whether-an-array-is-a-subset-of-another
     public MatchStatus CheckForMatch(List<RecipeStep> inputSteps)
@@ -88,9 +60,12 @@ public class Recipe : ScriptableObject
         else if (currNumSteps == recipeSteps.Count) { status = MatchStatus.ExactMatch; }
         else if (currNumSteps < recipeSteps.Count)  { status = MatchStatus.PartialMatch; }
 
-        Debug.Log("[" + this.name + "]: " + status.ToString());
-
         return status;
+    }
+
+    private void DebugPrintRecipeStatus(MatchStatus status)
+    {
+        Debug.Log("[" + this.name + "]: " + status.ToString());
     }
 }
 

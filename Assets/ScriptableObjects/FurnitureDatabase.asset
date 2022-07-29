@@ -42,3 +42,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c0f0a0fe93a473d418ccbe7bc01f3c3c, type: 2}
   - {fileID: 11400000, guid: 97e22b72c1a49e04299b87474c01c849, type: 2}
   - {fileID: 11400000, guid: c1cbf8c0816b7d749b860cdd28c2bc2b, type: 2}
+  RebuildDictOnValidate: 0
